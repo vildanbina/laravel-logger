@@ -127,7 +127,6 @@ class LaravelLoggerController extends BaseController
         }
 
         self::mapAdditionalDetails($userActivities);
-
         $data = [
             'activity'              => $activity,
             'userDetails'           => $userDetails,
@@ -157,7 +156,7 @@ class LaravelLoggerController extends BaseController
             $activity->delete();
         }
 
-        return redirect('activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logClearedSuccessfuly'));
+        return redirect('admin/activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logClearedSuccessfuly'));
     }
 
     /**
@@ -207,6 +206,17 @@ class LaravelLoggerController extends BaseController
         $langDetails = UserAgentDetails::localeLang($activity->locale);
         $eventTime = Carbon::parse($activity->created_at);
         $timePassed = $eventTime->diffForHumans();
+        if (config('LaravelLogger.loggerPaginationEnabled')) {
+            $userActivities = Activity::where('userId', $activity->userId)
+            ->orderBy('created_at', 'desc')
+            ->paginate(config('LaravelLogger.loggerPaginationPerPage'));
+            $totalUserActivities = $userActivities->total();
+        } else {
+            $userActivities = Activity::where('userId', $activity->userId)
+            ->orderBy('created_at', 'desc')
+            ->get();
+            $totalUserActivities = $userActivities->count();
+        }
 
         $data = [
             'activity'              => $activity,
@@ -215,6 +225,7 @@ class LaravelLoggerController extends BaseController
             'timePassed'            => $timePassed,
             'userAgentDetails'      => $userAgentDetails,
             'langDetails'           => $langDetails,
+            'userActivities'        => $userActivities,
             'isClearedEntry'        => true,
         ];
 
@@ -252,7 +263,7 @@ class LaravelLoggerController extends BaseController
             $activity->forceDelete();
         }
 
-        return redirect('activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logDestroyedSuccessfuly'));
+        return redirect('admin/activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logDestroyedSuccessfuly'));
     }
 
     /**
@@ -269,7 +280,7 @@ class LaravelLoggerController extends BaseController
             $activity->restore();
         }
 
-        return redirect('activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logRestoredSuccessfuly'));
+        return redirect('admin/activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logRestoredSuccessfuly'));
     }
 
     /**

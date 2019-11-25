@@ -55,7 +55,8 @@ if (Request::is('admin/activity/cleared')) {
                     <i class="fa fa-laptop fa-fw" aria-hidden="true"></i>
                     {!! trans('LaravelLogger::laravel-logger.dashboard.labels.agent') !!}
                 </th>
-                @if(Request::is('admin/activity/cleared'))
+                @if(Request::is('admin/
+                activity/cleared'))
                     <th>
                         <i class="fa fa-trash-o fa-fw" aria-hidden="true"></i>
                         {!! trans('LaravelLogger::laravel-logger.dashboard.labels.deleteDate') !!}
