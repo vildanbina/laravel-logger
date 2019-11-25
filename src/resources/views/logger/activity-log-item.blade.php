@@ -168,7 +168,7 @@
         <div class="{{ $containerHeaderClass }} @if($isClearedEntry) bg-danger text-white @else @endif" >
             {!! trans('LaravelLogger::laravel-logger.drilldown.title', ['id' => $activity->id]) !!}
             <a href="@if($isClearedEntry) {{route('cleared')}} @else {{route('activity')}} @endif" class="btn @if($isClearedEntry) btn-default @else btn-info @endif btn-sm pull-right">
-                <i class="fa fa-fw fa-mail-reply" aria-hidden="true"></i>
+            <i class="fas fa-reply-all"></i>
                 {!! trans('LaravelLogger::laravel-logger.drilldown.buttons.back') !!}
             </a>
         </div>

@@ -26,15 +26,15 @@ if (Request::is('admin/activity/cleared')) {
                     </span>
                 </th>
                 <th>
-                    <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-calendar-times"></i>
                     {!! trans('LaravelLogger::laravel-logger.dashboard.labels.time') !!}
                 </th>
                 <th>
-                    <i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-file-alt"></i>
                     {!! trans('LaravelLogger::laravel-logger.dashboard.labels.description') !!}
                 </th>
                 <th>
-                    <i class="fa fa-user-o fa-fw" aria-hidden="true"></i>
+                <i class="far fa-user"></i>
                     {!! trans('LaravelLogger::laravel-logger.dashboard.labels.user') !!}
                 </th>
                 <th>
@@ -44,7 +44,7 @@ if (Request::is('admin/activity/cleared')) {
                     </span>
                 </th>
                 <th>
-                    <i class="fa fa-map-o fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-map-marker-alt"></i>
                     {!! trans('LaravelLogger::laravel-logger.dashboard.labels.route') !!}
                 </th>
                 <th>

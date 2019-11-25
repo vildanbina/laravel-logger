@@ -86,7 +86,7 @@
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <a href="{{route('activity')}}" class="dropdown-item">
                                             <span class="text-primary">
-                                                <i class="fa fa-fw fa-mail-reply" aria-hidden="true"></i>
+                                            <i class="fas fa-reply-all"></i>
                                                 {!! trans('LaravelLogger::laravel-logger.dashboard.menu.back') !!}
                                             </span>
                                         </a>
@@ -100,7 +100,7 @@
                                         <li>
                                             <a href="{{route('activity')}}">
                                                 <span class="text-primary">
-                                                    <i class="fa fa-fw fa-mail-reply" aria-hidden="true"></i>
+                                                <i class="fas fa-reply-all"></i>
                                                     {!! trans('LaravelLogger::laravel-logger.dashboard.menu.back') !!}
                                                 </span>
                                             </a>
