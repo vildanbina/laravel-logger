@@ -228,7 +228,7 @@ if (Request::is('admin/activity/cleared')) {
                                 {{ $browserVersion }}
                             </small>
                         </sup>
-                        <i class="fa {{ $platformIcon }} fa-fw" aria-hidden="true">
+                        <i class="fab {{ $platformIcon }} fa-fw" aria-hidden="true">
                             <span class="sr-only">
                                 {{ $platform }}
                             </span>

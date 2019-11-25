@@ -195,7 +195,7 @@
                                         </dd>
                                         <dt>{!! trans('LaravelLogger::laravel-logger.drilldown.list-group.labels.agent') !!}</dt>
                                         <dd>
-                                            <i class="fa {{ $platformIcon }} fa-fw" aria-hidden="true">
+                                            <i class="fab {{ $platformIcon }} fa-fw" aria-hidden="true">
                                                 <span class="sr-only">
                                                     {{ $platform }}
                                                 </span>
