@@ -218,7 +218,7 @@ if (Request::is('admin/activity/cleared')) {
                                     break;
                             }
                         @endphp
-                        <i class="fa {{ $browserIcon }} fa-fw" aria-hidden="true">
+                        <i class="fab {{ $browserIcon }} fa-fw" aria-hidden="true">
                             <span class="sr-only">
                                 {{ $browser }}
                             </span>
