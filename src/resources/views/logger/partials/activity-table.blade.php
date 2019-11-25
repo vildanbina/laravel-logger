@@ -1,7 +1,7 @@
 @php
 
 $drilldownStatus = config('LaravelLogger.enableDrillDown');
-$prependUrl = '/activity/log/';
+$prependUrl = '/admin/activity/log/';
 
 if (isset($hoverable) && $hoverable === true) {
     $hoverable = true;
@@ -9,8 +9,8 @@ if (isset($hoverable) && $hoverable === true) {
     $hoverable = false;
 }
 
-if (Request::is('activity/cleared')) {
-    $prependUrl = '/activity/cleared/log/';
+if (Request::is('admin/activity/cleared')) {
+    $prependUrl = '/admin/activity/cleared/log/';
 }
 
 @endphp
@@ -55,7 +55,7 @@ if (Request::is('activity/cleared')) {
                     <i class="fa fa-laptop fa-fw" aria-hidden="true"></i>
                     {!! trans('LaravelLogger::laravel-logger.dashboard.labels.agent') !!}
                 </th>
-                @if(Request::is('activity/cleared'))
+                @if(Request::is('admin/activity/cleared'))
                     <th>
                         <i class="fa fa-trash-o fa-fw" aria-hidden="true"></i>
                         {!! trans('LaravelLogger::laravel-logger.dashboard.labels.deleteDate') !!}
@@ -238,7 +238,7 @@ if (Request::is('activity/cleared')) {
                             </small>
                         </sup>
                     </td>
-                    @if(Request::is('activity/cleared'))
+                    @if(Request::is('admin/activity/cleared'))
                         <td>
                             {{ $activity->deleted_at }}
                         </td>
