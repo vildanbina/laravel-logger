@@ -61,7 +61,7 @@ class LaravelLoggerServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        $router->middlewareGroup('activity', [LogActivity::class]);
+        //$router->middlewareGroup('activity', [LogActivity::class]);
         $this->loadTranslationsFrom(__DIR__.'/resources/lang/', 'LaravelLogger');
     }
 
