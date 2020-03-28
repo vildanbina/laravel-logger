@@ -84,7 +84,7 @@
                                 </button>
                                 @if(config('LaravelLogger.bootstapVersion') == '4')
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <a href="{{route('activity')}}" class="dropdown-item">
+                                        <a href="{{route('admin.activity')}}" class="dropdown-item">
                                             <span class="text-primary">
                                             <i class="fas fa-reply-all"></i>
                                                 {!! trans('LaravelLogger::laravel-logger.dashboard.menu.back') !!}
@@ -98,7 +98,7 @@
                                 @else
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="{{route('activity')}}">
+                                            <a href="{{route('admin.activity')}}">
                                                 <span class="text-primary">
                                                 <i class="fas fa-reply-all"></i>
                                                     {!! trans('LaravelLogger::laravel-logger.dashboard.menu.back') !!}
