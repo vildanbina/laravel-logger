@@ -1,11 +1,11 @@
 <?php
 
-namespace bexvibi\LaravelLogger\App\Http\Traits;
+namespace vildanbina\LaravelLogger\App\Http\Traits;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Request;
 use Jaybizzle\LaravelCrawlerDetect\Facades\LaravelCrawlerDetect as Crawler;
-use bexvibi\LaravelLogger\App\Models\Activity;
+use vildanbina\LaravelLogger\App\Models\Activity;
 use Validator;
 
 trait ActivityLogger

@@ -1,10 +1,10 @@
 <?php
 
-namespace bexvibi\LaravelLogger;
+namespace vildanbina\LaravelLogger;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use bexvibi\LaravelLogger\App\Http\Middleware\LogActivity;
+use vildanbina\LaravelLogger\App\Http\Middleware\LogActivity;
 
 class LaravelLoggerServiceProvider extends ServiceProvider
 {
@@ -25,31 +25,31 @@ class LaravelLoggerServiceProvider extends ServiceProvider
     protected $listeners = [
 
         'Illuminate\Auth\Events\Attempting' => [
-            'bexvibi\LaravelLogger\App\Listeners\LogAuthenticationAttempt',
+            'vildanbina\LaravelLogger\App\Listeners\LogAuthenticationAttempt',
         ],
 
         'Illuminate\Auth\Events\Authenticated' => [
-            'bexvibi\LaravelLogger\App\Listeners\LogAuthenticated',
+            'vildanbina\LaravelLogger\App\Listeners\LogAuthenticated',
         ],
 
         'Illuminate\Auth\Events\Login' => [
-            'bexvibi\LaravelLogger\App\Listeners\LogSuccessfulLogin',
+            'vildanbina\LaravelLogger\App\Listeners\LogSuccessfulLogin',
         ],
 
         'Illuminate\Auth\Events\Failed' => [
-            'bexvibi\LaravelLogger\App\Listeners\LogFailedLogin',
+            'vildanbina\LaravelLogger\App\Listeners\LogFailedLogin',
         ],
 
         'Illuminate\Auth\Events\Logout' => [
-            'bexvibi\LaravelLogger\App\Listeners\LogSuccessfulLogout',
+            'vildanbina\LaravelLogger\App\Listeners\LogSuccessfulLogout',
         ],
 
         'Illuminate\Auth\Events\Lockout' => [
-            'bexvibi\LaravelLogger\App\Listeners\LogLockout',
+            'vildanbina\LaravelLogger\App\Listeners\LogLockout',
         ],
 
         'Illuminate\Auth\Events\PasswordReset' => [
-            'bexvibi\LaravelLogger\App\Listeners\LogPasswordReset',
+            'vildanbina\LaravelLogger\App\Listeners\LogPasswordReset',
         ],
 
     ];

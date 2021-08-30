@@ -1,5 +1,5 @@
 {
-    "name": "bexvibi/laravel-logger",
+    "name": "vildanbina/laravel-logger",
     "description": "Laravel Logger Package",
     "keywords": [
             "Laravel activity",
@@ -12,8 +12,8 @@
     "type": "package",
     "authors": [
         {
-            "name": "bexvibi",
-            "email": "bexvibi@gmail.com"
+            "name": "vildanbina",
+            "email": "vildanbina@gmail.com"
         }
     ],
     "minimum-stability": "dev",
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "bexvibi\\LaravelLogger\\": "src/"
+            "vildanbina\\LaravelLogger\\": "src/"
         },
         "files": [
             "src/app/Logic/helpers.php"
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "bexvibi\\LaravelLogger\\LaravelLoggerServiceProvider"
+                "vildanbina\\LaravelLogger\\LaravelLoggerServiceProvider"
             ]
         }
     },

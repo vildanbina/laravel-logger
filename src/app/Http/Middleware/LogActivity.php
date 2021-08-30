@@ -1,10 +1,10 @@
 <?php
 
-namespace bexvibi\LaravelLogger\App\Http\Middleware;
+namespace vildanbina\LaravelLogger\App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use bexvibi\LaravelLogger\App\Http\Traits\ActivityLogger;
+use vildanbina\LaravelLogger\App\Http\Traits\ActivityLogger;
 
 class LogActivity
 {

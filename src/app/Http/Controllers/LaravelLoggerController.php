@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\LaravelLogger\App\Http\Controllers;
+namespace vildanbina\LaravelLogger\App\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -8,9 +8,9 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
-use bexvibi\LaravelLogger\App\Http\Traits\IpAddressDetails;
-use bexvibi\LaravelLogger\App\Http\Traits\UserAgentDetails;
-use bexvibi\LaravelLogger\App\Models\Activity;
+use vildanbina\LaravelLogger\App\Http\Traits\IpAddressDetails;
+use vildanbina\LaravelLogger\App\Http\Traits\UserAgentDetails;
+use vildanbina\LaravelLogger\App\Models\Activity;
 
 class LaravelLoggerController extends BaseController
 {

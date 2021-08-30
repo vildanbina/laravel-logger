@@ -1,6 +1,6 @@
 <?php
 
-namespace bexvibi\LaravelLogger\App\Http\Traits;
+namespace vildanbina\LaravelLogger\App\Http\Traits;
 
 trait IpAddressDetails
 {

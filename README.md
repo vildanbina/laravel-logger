@@ -1,12 +1,12 @@
 # Laravel Activity Logger
 
-[![Latest Stable Version](https://poser.pugx.org/bexvibi/laravel-logger/v/stable)](https://packagist.org/packages/bexvibi/laravel-logger)
-[![Total Downloads](https://poser.pugx.org/bexvibi/laravel-logger/downloads)](https://packagist.org/packages/bexvibi/laravel-logger)
-[![Travis-CI Build](https://travis-ci.org/bexvibi/laravel-logger.svg?branch=master)](https://travis-ci.org/bexvibi/laravel-logger)
+[![Latest Stable Version](https://poser.pugx.org/vildanbina/laravel-logger/v/stable)](https://packagist.org/packages/vildanbina/laravel-logger)
+[![Total Downloads](https://poser.pugx.org/vildanbina/laravel-logger/downloads)](https://packagist.org/packages/vildanbina/laravel-logger)
+[![Travis-CI Build](https://travis-ci.org/vildanbina/laravel-logger.svg?branch=master)](https://travis-ci.org/vildanbina/laravel-logger)
 <a href="https://styleci.io/repos/109630720">
     <img src="https://styleci.io/repos/109630720/shield?branch=master" alt="StyleCI" style="border-radius: 3px;">
 </a>
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bexvibi/laravel-logger/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bexvibi/laravel-logger/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vildanbina/laravel-logger/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vildanbina/laravel-logger/?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### READY FOR USE!
@@ -31,7 +31,7 @@
 Laravel logger is an activity event logger for your Laravel or Lumen application. It comes out the box with ready to use with dashboard to view your activity. Laravel logger can be added as a middleware or called through a trait. Easily have an Activity Log. This package is easily configurable and customizable. Supports Laravel 5.3, 5.4, 5.5, 5.6, 5.7, and 5.8+
 
 Laravel logger can work out the box with or without the following roles packages:
-* [bexvibi/laravel-roles](https://github.com/bexvibi/laravel-roles)
+* [vildanbina/laravel-roles](https://github.com/vildanbina/laravel-roles)
 * [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 * [Zizaco/entrust](https://github.com/Zizaco/entrust)
 * [romanbican/roles](https://github.com/romanbican/roles)
@@ -74,7 +74,7 @@ Laravel logger can work out the box with or without the following roles packages
 1. From your projects root folder in terminal run:
 
 ```bash
-    composer require bexvibi/laravel-logger
+    composer require vildanbina/laravel-logger
 ```
 
 2. Register the package
@@ -87,7 +87,7 @@ Register the package with laravel in `config/app.php` under `providers` with the
 
 ```php
     'providers' => [
-        bexvibi\LaravelLogger\LaravelLoggerServiceProvider::class,
+        vildanbina\LaravelLogger\LaravelLoggerServiceProvider::class,
     ];
 ```
 
@@ -113,7 +113,7 @@ Register the package with laravel in `config/app.php` under `providers` with the
 1. From your projects root folder in terminal run:
 
 ```bash
-    composer require bexvibi/laravel-logger
+    composer require vildanbina/laravel-logger
 ```
 
 2. Register the package
@@ -123,8 +123,8 @@ Register the package with laravel in `bootstrap/app.php` with the following:
 ```php
     $app->register(\Jaybizzle\LaravelCrawlerDetect\LaravelCrawlerDetectServiceProvider::class);
     $app->configure('laravel-logger');
-    $app->register(\bexvibi\LaravelLogger\LaravelLoggerServiceProvider::class);
-    $app->routeMiddleware(['activity' => \bexvibi\LaravelLogger\App\Http\Middleware\LogActivity::class, ]);
+    $app->register(\vildanbina\LaravelLogger\LaravelLoggerServiceProvider::class);
+    $app->routeMiddleware(['activity' => \vildanbina\LaravelLogger\App\Http\Middleware\LogActivity::class, ]);
 ```
 
 3. Copy the configuration file [laravel-logger.php](src/config/laravel-logger.php) to your `config/` directory
@@ -217,7 +217,7 @@ To use the trait:
 1. Include the call in the head of your class file:
 
 ```php
-    use bexvibi\LaravelLogger\App\Http\Traits\ActivityLogger;
+    use vildanbina\LaravelLogger\App\Http\Traits\ActivityLogger;
 ```
 
 2. Include the trait call in the opening of your class:
@@ -253,7 +253,7 @@ If you are on an existing install, you will also need update your `laravel-logge
 You can then add the routes directly to your application's `routes/web.php` file, and customise as required.
 
 ```php
-Route::group(['prefix' => 'activity', 'namespace' => 'bexvibi\LaravelLogger\App\Http\Controllers', 'middleware' => ['web', 'auth', 'activity']], function () {
+Route::group(['prefix' => 'activity', 'namespace' => 'vildanbina\LaravelLogger\App\Http\Controllers', 'middleware' => ['web', 'auth', 'activity']], function () {
 
     // Dashboards
     Route::get('/', 'LaravelLoggerController@showAccessLog')->name('activity');
@@ -385,7 +385,7 @@ Before opening an issue there are a couple of considerations:
 * **Show that you have made an attempt** to *look into the issue*.
 * **Check** to see if the issue you are *reporting is a duplicate* of a previous reported issue.
 * **Following these instructions show me that you have tried.**
-* If you have a questions send me an email to bexvibi@gmail.com
+* If you have a questions send me an email to vildanbina@gmail.com
 * Need some help, I can do my best on Slack: https://opensourcehelpgroup.slack.com
 * Please be considerate that this is an open source project that I provide to the community for FREE when opening an issue. 
 

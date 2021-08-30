@@ -1,9 +1,9 @@
 <?php
 
-namespace bexvibi\LaravelLogger\App\Listeners;
+namespace vildanbina\LaravelLogger\App\Listeners;
 
 use Illuminate\Auth\Events\Authenticated;
-use bexvibi\LaravelLogger\App\Http\Traits\ActivityLogger;
+use vildanbina\LaravelLogger\App\Http\Traits\ActivityLogger;
 
 class LogAuthenticated
 {

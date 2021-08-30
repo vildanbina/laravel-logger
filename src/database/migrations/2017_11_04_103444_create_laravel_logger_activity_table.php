@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use bexvibi\LaravelLogger\App\Models\Activity;
+use vildanbina\LaravelLogger\App\Models\Activity;
 
 class CreateLaravelLoggerActivityTable extends Migration
 {
